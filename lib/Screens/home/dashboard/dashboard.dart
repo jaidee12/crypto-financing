@@ -1,6 +1,6 @@
-import 'package:crypto_finnace/home/dashboard/summarycards.dart';
-import 'package:crypto_finnace/home/dashboard/toppanel.dart';
-import 'package:crypto_finnace/home/dashboard/uppermidpanel.dart';
+import 'package:crypto_finnace/Screens/home/dashboard/summarycards.dart';
+import 'package:crypto_finnace/Screens/home/dashboard/toppanel.dart';
+import 'package:crypto_finnace/Screens/home/dashboard/uppermidpanel.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 

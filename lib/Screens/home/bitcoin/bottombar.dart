@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import '../dashboard/controllartotalamount.dart'; // Ensure this path is correct
+import '../../../controllers/controllartotalamount.dart';
+
 
 class bottombar extends StatelessWidget {
   const bottombar({super.key});

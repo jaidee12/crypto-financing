@@ -1,10 +1,13 @@
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import '../dashboard/controllartotalamount.dart';
+import 'package:get/get_core/src/get_main.dart';
+import 'package:get/get_state_manager/src/rx_flutter/rx_obx_widget.dart';
+import '../../../controllers/controllartotalamount.dart';
 
 
-class uppermidbar extends StatelessWidget {
-  const uppermidbar({super.key});
+class uppermidpanel extends StatelessWidget {
+  const uppermidpanel({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -18,32 +21,18 @@ class uppermidbar extends StatelessWidget {
         crossAxisAlignment: CrossAxisAlignment.end, // Aligns text and possibly a button at the bottom
         children: [
           Column(
-            crossAxisAlignment: CrossAxisAlignment.start,
+            crossAxisAlignment: CrossAxisAlignment.start, // Aligns text to the left
             children: [
-              // 1. Wrap the title in a Row to add the icon
-              Row(
-                mainAxisSize: MainAxisSize.min,
-                children: [
-                  Image.asset(
-                    "assets/bitcoin.png", // Your custom icon path
-                    height: 18, // Adjust size to match your text height
-                    width: 18,
-                    fit: BoxFit.contain,
-                  ),
-                  const SizedBox(width: 8), // Space between icon and text
-                  Text(
-                    "Bitcoin",
-                    style: TextStyle(
-                      color: Colors.grey[500],
-                      fontSize: 14, // Slightly larger to balance the icon
-                      fontWeight: FontWeight.w500,
-                    ),
-                  ),
-                ],
+              Text(
+                "Total Balance",
+                style: TextStyle(
+                  color: Colors.grey[500],
+                  fontSize: 12,
+                  fontWeight: FontWeight.w500,
+                ),
               ),
-
               const SizedBox(height: 8),
-
+              // Obx only wraps the part that actually changes
               Obx(() => Text(
                 "\$${controller.totalBalance.value.toStringAsFixed(2)}",
                 style: const TextStyle(
@@ -54,7 +43,7 @@ class uppermidbar extends StatelessWidget {
                 ),
               )),
             ],
-          )
+          ),
           // You can add a 'Monthly Profit' or 'Icon' here to fill the Right side of the Row
         ],
       ),

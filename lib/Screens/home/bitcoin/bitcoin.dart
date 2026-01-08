@@ -1,6 +1,6 @@
-import 'package:crypto_finnace/home/bitcoin/topbar.dart';
-import 'package:crypto_finnace/home/bitcoin/upperbottombar.dart';
-import 'package:crypto_finnace/home/bitcoin/uppermidbar.dart';
+import 'package:crypto_finnace/Screens/home/bitcoin/topbar.dart';
+import 'package:crypto_finnace/Screens/home/bitcoin/upperbottombar.dart';
+import 'package:crypto_finnace/Screens/home/bitcoin/uppermidbar.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 

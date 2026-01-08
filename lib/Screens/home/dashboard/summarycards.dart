@@ -4,8 +4,9 @@ import 'package:get/get.dart';
 import 'package:syncfusion_flutter_charts/charts.dart';
 
 
+import '../../../controllers/controllartotalamount.dart';
 import '../bitcoin/bitcoin.dart';
-import 'controllartotalamount.dart';
+
 
 class CandleData {
   CandleData({required this.x, required this.open, required this.high, required this.low, required this.close});

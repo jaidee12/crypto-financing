@@ -4,10 +4,12 @@ import 'package:get/get.dart';
 import 'package:get/get_core/src/get_main.dart';
 import 'package:get/get_state_manager/src/rx_flutter/rx_obx_widget.dart';
 
-import 'controllartotalamount.dart';
+import '../../../controllers/controllartotalamount.dart';
 
-class uppermidpanel extends StatelessWidget {
-  const uppermidpanel({super.key});
+
+
+class upperbottombar extends StatelessWidget {
+  const upperbottombar({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -24,7 +26,7 @@ class uppermidpanel extends StatelessWidget {
             crossAxisAlignment: CrossAxisAlignment.start, // Aligns text to the left
             children: [
               Text(
-                "Total Balance",
+                "Your Balance",
                 style: TextStyle(
                   color: Colors.grey[500],
                   fontSize: 12,
@@ -44,6 +46,20 @@ class uppermidpanel extends StatelessWidget {
               )),
             ],
           ),
+
+
+          Container(
+            padding: EdgeInsets.only(top: 18, left: 5, right: 5, bottom: 10),
+          child: Obx(() => Text(
+            "${controller.getBtcValue()} BTC",
+            style: const TextStyle(
+              color: Colors.white,
+              fontSize: 14,
+              fontWeight: FontWeight.normal,
+              letterSpacing: 1.2,
+            ),
+          )),
+          )
           // You can add a 'Monthly Profit' or 'Icon' here to fill the Right side of the Row
         ],
       ),
